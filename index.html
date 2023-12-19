@@ -25,15 +25,15 @@
             <h3>Video DASH</h3>
         </div>
         <div class="row">
-            <div class="embed-responsive embed-responsive-16by9">
-                <video width=600 height=300 id="videoPlayer" controls></video>
+            <div>
+                <video class="embed-responsive embed-responsive-16by9" id="videoPlayer" controls></video>
             </div>
         </div>
     </div>
 
     <script>
         (function() {
-            var url = "https://ardih-public-video-output.s3.ap-southeast-2.amazonaws.com/wing-it-multires/wing-it.mpd";
+            var url = "https://videodashcontent.awsarena.com/wing-it-multires/wing-it.mpd";
             var player = dashjs.MediaPlayer().create();
             player.initialize(document.querySelector("#videoPlayer"), url, true);
         })();
